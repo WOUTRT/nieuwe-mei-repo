@@ -94,7 +94,7 @@ function gameResult() {
   }
   $("#result").text(result);
   $("#score1").text("mijn score: " + mijnScore);
-  $("#score2").text("jouwscore: " + jouwScore);
+  $("#score2").text("jouw score: " + jouwScore);
 
   setTimeout(function () {
   
