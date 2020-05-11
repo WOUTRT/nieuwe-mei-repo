@@ -7,8 +7,7 @@ $(":button").on("click", function () {
   console.log(elemId);
   if ($(this).hasClass("marked")) {
     $(this).toggleClass("chosen").toggleClass("marked");
-    //locked in
-    // game starts
+  
     setTimeout(gameStart(), 1000);
   } else {
     $(":button").removeClass("marked", "chosen");
@@ -28,13 +27,13 @@ function gameStart() {
         break;
       case 3:
         $("#pLeft, #pRight").text("schaar!");
-        // after 3 seconds execute code
+      
         break;
       case 4:
         clearInterval(interval);
         setTimeout(gameResult(), 4000);
     }
-  }, 1000); // every 1 second
+  }, 1000); 
 }
 function gameResult() {
   let randomNmbr = Math.floor(Math.random() * optionArray.length);
@@ -98,7 +97,7 @@ function gameResult() {
   $("#score2").text("jouwscore: " + jouwScore);
 
   setTimeout(function () {
-    //resetting screen
+  
     counter = 0;
     $(":button").removeClass("chosen", "marked");
   }, 1000);
